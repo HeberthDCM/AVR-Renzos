@@ -7,14 +7,12 @@ import {
   Layers, 
   BarChart3, 
   Settings,
-  PlusCircle,
-  History,
-  Users,
-  Calendar,
-  Box,
-  Truck,
-  FileText
+  ArrowRightLeft,
+  Settings2
 } from 'lucide-react';
+
+// URL de tu servidor local (Node.js/Express)
+export const API_BASE_URL = 'http://localhost:3000/api';
 
 export const PRIMARY_APPS: PrimaryApp[] = [
   {
@@ -22,10 +20,12 @@ export const PRIMARY_APPS: PrimaryApp[] = [
     label: 'Caja',
     icon: <Wallet className="w-6 h-6" />,
     secondaryMenus: [
-      { id: 'caja-apertura', label: 'Apertura/Cierre' },
+      { id: 'caja-movimientos', label: 'Movimientos' },
       { id: 'caja-ingresos', label: 'Ingresos' },
       { id: 'caja-egresos', label: 'Egresos' },
-      { id: 'caja-movimientos', label: 'Movimientos' }
+      { id: 'caja-transf', label: 'Transferir' },
+      { id: 'caja-ajuste', label: 'Ajuste' },
+      { id: 'caja-apertura', label: 'Cerrar Caja' }
     ]
   },
   {
